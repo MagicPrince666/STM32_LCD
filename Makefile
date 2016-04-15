@@ -38,10 +38,11 @@ INCLUDE +=  -I$(CORE)/include	\
 ELF = $(BUILDDIR)/program.elf
 HEX = $(BUILDDIR)/program.hex
 BIN = $(BUILDDIR)/program.bin
+TARGETMAP = stm32f10x.map
 
 LDSCRIPT = stm32f103xe_flash.ld
 TARGET_ARCH = -mthumb -mcpu=cortex-m3
-LDFLAGS = -nostartfiles -Wl,--gc-sections,-cref $(TARGET_ARCH)
+LDFLAGS = -nostartfiles -Wl,--gc-sections,-Map=$(TARGETMAP),-cref $(TARGET_ARCH)
 
 ###------------------------  Cross Compile Toolchain ------------------------###
 CC      = arm-none-eabi-gcc
@@ -73,6 +74,7 @@ flash: build
 #---------------------------------- Clean ----------------------------------#
 clean:
 	rm -rf build
+	rm -f $(TARGETMAP)
 
 $(BIN): $(ELF)
 	$(OBJCOPY) -O binary $< $@

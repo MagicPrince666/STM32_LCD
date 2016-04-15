@@ -15,7 +15,7 @@ brew install gcc-arm-none-eabi
 ```
 brew install stlink
 ```
-you can see the infomation by use `brew info stlink`
+you can see the infomation by typing `brew info stlink`
 ```
 stlink: stable 1.1.0 (bottled), HEAD
 stm32 discovery line Linux programmer
@@ -32,4 +32,3 @@ Required: libusb ✔
 
 #### for other
 You can do it by yourself!
-
