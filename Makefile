@@ -60,9 +60,19 @@ CFLAGS += -fdata-sections
 CFLAGS += $(INCLUDE)
 CFLAGS += -DUSE_STDPERIPH_DRIVER
 
-#-mfpu=fpv4-sp-d16 -mfloat-abi=hard	\
-#$(INCLUDE) -DUSE_STDPERIPH_DRIVER
+#-mfpu=fpv4-sp-d16 -mfloat-abi=hard
 
+#---------------------------------- Build ----------------------------------#
+.PHONY: build
+build: $(BIN) $(HEX)
+
+#---------------------------------- Flash ----------------------------------#
+flash: build
+	st-flash write $(BIN) 0x8000000
+
+#---------------------------------- Clean ----------------------------------#
+clean:
+	rm -rf build
 
 $(BIN): $(ELF)
 	$(OBJCOPY) -O binary $< $@
@@ -80,15 +90,3 @@ $(BUILDDIR)/%.o: %.c
 $(BUILDDIR)/%.o: %.s
 	@mkdir -p $(dir $@)
 	$(CC) -c $(CFLAGS) $< -o $@
-
-#---------------------------------- Build ----------------------------------#
-.PHONY: build
-build: $(BIN) $(HEX)
-
-#---------------------------------- Flash ----------------------------------#
-flash: build
-	st-flash write $(BIN) 0x8000000
-
-#---------------------------------- Clean ----------------------------------#
-clean:
-	rm -rf build
