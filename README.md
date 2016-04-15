@@ -5,17 +5,17 @@ It should run on any \*nux system. It has been tested on:
 - Mac OS X
 
 #### for mac os x
-1. Install arm-none-eabi-gcc Cross Compile Toolchain
+- Install arm-none-eabi-gcc Cross Compile Toolchain
 ```
 brew tap blanboom/homebrew-mcu-devtools
 brew install gcc-arm-none-eabi
 ```
 
-2. Install stlink
+- Install stlink
 ```
 brew install stlink
 ```
-you can the infomation by use `brew info stlink`
+you can see the infomation by use `brew info stlink`
 ```
 stlink: stable 1.1.0 (bottled), HEAD
 stm32 discovery line Linux programmer
@@ -28,4 +28,8 @@ Build: autoconf ✔, automake ✔, pkg-config ✔
 Required: libusb ✔
 ```
 
-3. you can run `make bulid`
+- you can run `make bulid`
+
+#### for other
+You can do it by yourself!
+
