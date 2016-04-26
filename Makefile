@@ -22,12 +22,17 @@ SOURCES += $(PERIPH)/src/stm32f10x_gpio.c		\
 			$(PERIPH)/src/stm32f10x_flash.c		\
 			$(PERIPH)/src/stm32f10x_usart.c		\
 			$(PERIPH)/src/misc.c				\
+			$(PERIPH)/src/stm32f10x_tim.c		\
+			$(PERIPH)/src/stm32f10x_dma.c		\
+			$(PERIPH)/src/stm32f10x_adc.c		\
+			$(PERIPH)/src/stm32f10x_pwr.c		\
 			$(CORE)/src/core_cm3.c
 
 SOURCES += startup_stm32f10x_xl.s
 SOURCES += stm32f10x_it.c
 SOURCES += system_stm32f10x.c
 SOURCES += led.c
+SOURCES += tick.c
 SOURCES += main.c
 
 OBJECTS = $(addprefix $(BUILDDIR)/, $(addsuffix .o, $(basename $(SOURCES))))
