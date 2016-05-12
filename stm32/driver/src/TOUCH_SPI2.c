@@ -2,7 +2,7 @@
 
 /*******************************************************************************
 
-´¥ÃşĞ¾Æ¬ÅäÖÃ
+è§¦æ‘¸èŠ¯ç‰‡é…ç½®
 
 *******************************************************************************/
 
@@ -13,103 +13,103 @@ u16 TPReadX(void);
 u16 TPReadY(void);
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-** º¯ÊıÃû³Æ: SPI_Config 
-** ¹¦ÄÜÃèÊö: ´¥Ãş°åSPI½Ó¿ÚÅäÖÃ
-** ²ÎÊıÃèÊö£ºÎŞ
-** ×÷  ¡¡Õß: ±´Ò»ÌØ¿Æ¼¼  
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** å‡½æ•°åç§°: SPI_Config
+** åŠŸèƒ½æè¿°: è§¦æ‘¸æ¿SPIæ¥å£é…ç½®
+** å‚æ•°æè¿°ï¼šæ— 
+** ä½œ  ã€€è€…: è´ä¸€ç‰¹ç§‘æŠ€
+** æ—¥ã€€  æœŸ: 2015å¹´3æœˆ20æ—¥
+** æ·˜å®åº—é“ºï¼šhttp://shop58856066.taobao.com/
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-void SPI_Config(void) 	  //´¥ÃşÆÁSPI½Ó¿Ú
-{ 
-		  GPIO_InitTypeDef  GPIO_InitStructure; 
-		  SPI_InitTypeDef   SPI_InitStructure; 
-		
-		  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);   
-		  RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE) ;
-		
-		  //Configure SPI2 pins: SCK, MISO and MOSI 
-		  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13|GPIO_Pin_15; 
-		  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; 
-		  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;   //ÍÆÍìÊä³ö
-		  GPIO_Init(GPIOB,&GPIO_InitStructure);  
-		
-		  //Configure SPI2 pins: SCK, MISO and MOSI 
-		  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_14; 
-		  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; 
-		  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;   //ÊäÈë
-		  GPIO_Init(GPIOB,&GPIO_InitStructure);  
+void SPI_Config(void) 	  //è§¦æ‘¸å±SPIæ¥å£
+{
+		  GPIO_InitTypeDef  GPIO_InitStructure;
+		  SPI_InitTypeDef   SPI_InitStructure;
 
-		  //Configure PB2 pin: TP_CS pin 
-		  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12; 
-		  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; 
-		  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; 	//ÍÆÍìÊä³ö
-		  GPIO_Init(GPIOB,&GPIO_InitStructure); 
+		  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
+		  RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE) ;
+
+		  //Configure SPI2 pins: SCK, MISO and MOSI
+		  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13|GPIO_Pin_15;
+		  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+		  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;   //æ¨æŒ½è¾“å‡º
+		  GPIO_Init(GPIOB,&GPIO_InitStructure);
+
+		  //Configure SPI2 pins: SCK, MISO and MOSI
+		  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_14;
+		  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+		  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;   //è¾“å…¥
+		  GPIO_Init(GPIOB,&GPIO_InitStructure);
+
+		  //Configure PB2 pin: TP_CS pin
+		  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12;
+		  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+		  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; 	//æ¨æŒ½è¾“å‡º
+		  GPIO_Init(GPIOB,&GPIO_InitStructure);
 
 		  // SPI2 Config
-		  SPI_Cmd(SPI2, DISABLE);     
-		  SPI_InitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex; 
-		  SPI_InitStructure.SPI_Mode = SPI_Mode_Master; 
-		  SPI_InitStructure.SPI_DataSize = SPI_DataSize_8b; 
-		  SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low; 
-		  SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge; 
+		  SPI_Cmd(SPI2, DISABLE);
+		  SPI_InitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
+		  SPI_InitStructure.SPI_Mode = SPI_Mode_Master;
+		  SPI_InitStructure.SPI_DataSize = SPI_DataSize_8b;
+		  SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;
+		  SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;
 		  SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;   //SPI_NSS_Hard
-		  SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_64; 
-		  SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB; 
-		  SPI_InitStructure.SPI_CRCPolynomial = 7; 
-		  SPI_Init(SPI2,&SPI_InitStructure); 
-		
-		  // SPI2 enable  
-		  SPI_Cmd(SPI2,ENABLE);  
+		  SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_64;
+		  SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;
+		  SPI_InitStructure.SPI_CRCPolynomial = 7;
+		  SPI_Init(SPI2,&SPI_InitStructure);
+
+		  // SPI2 enable
+		  SPI_Cmd(SPI2,ENABLE);
 }
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-** º¯ÊıÃû³Æ: SPI_WriteByte 
-** ¹¦ÄÜÃèÊö: 
-** ²ÎÊıÃèÊö£ºÎŞ
-** ×÷  ¡¡Õß: ±´Ò»ÌØ¿Æ¼¼  
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** å‡½æ•°åç§°: SPI_WriteByte
+** åŠŸèƒ½æè¿°:
+** å‚æ•°æè¿°ï¼šæ— 
+** ä½œ  ã€€è€…: è´ä¸€ç‰¹ç§‘æŠ€
+** æ—¥ã€€  æœŸ: 2015å¹´3æœˆ20æ—¥
+** æ·˜å®åº—é“ºï¼šhttp://shop58856066.taobao.com/
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-unsigned char SPI_WriteByte(unsigned char data) 
-{ 
-		unsigned char Data = 0; 
-		
-		//Wait until the transmit buffer is empty 
-		while(SPI_I2S_GetFlagStatus(SPI2,SPI_I2S_FLAG_TXE)==RESET); 
-		// Send the byte  
-		SPI_I2S_SendData(SPI2,data); 
-		
-		 //Wait until a data is received 
-		while(SPI_I2S_GetFlagStatus(SPI2,SPI_I2S_FLAG_RXNE)==RESET); 
-		// Get the received data 
-		Data = SPI_I2S_ReceiveData(SPI2); 
-		
-		// Return the shifted data 
-		return Data; 
-} 
+unsigned char SPI_WriteByte(unsigned char data)
+{
+		unsigned char Data = 0;
+
+		//Wait until the transmit buffer is empty
+		while(SPI_I2S_GetFlagStatus(SPI2,SPI_I2S_FLAG_TXE)==RESET);
+		// Send the byte
+		SPI_I2S_SendData(SPI2,data);
+
+		 //Wait until a data is received
+		while(SPI_I2S_GetFlagStatus(SPI2,SPI_I2S_FLAG_RXNE)==RESET);
+		// Get the received data
+		Data = SPI_I2S_ReceiveData(SPI2);
+
+		// Return the shifted data
+		return Data;
+}
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-** º¯ÊıÃû³Æ: SpiDelay(unsigned int DelayCnt) 
-** ¹¦ÄÜÃèÊö: 
-** ²ÎÊıÃèÊö£ºÎŞ
-** ×÷  ¡¡Õß: ±´Ò»ÌØ¿Æ¼¼  
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/ 
+** å‡½æ•°åç§°: SpiDelay(unsigned int DelayCnt)
+** åŠŸèƒ½æè¿°:
+** å‚æ•°æè¿°ï¼šæ— 
+** ä½œ  ã€€è€…: è´ä¸€ç‰¹ç§‘æŠ€
+** æ—¥ã€€  æœŸ: 2015å¹´3æœˆ20æ—¥
+** æ·˜å®åº—é“ºï¼šhttp://shop58856066.taobao.com/
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 void SpiDelay(unsigned int DelayCnt)
 {
 		unsigned int i;
 		for(i=0;i<DelayCnt;i++);
 }
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-** º¯ÊıÃû³Æ: SpiDelay(unsigned int DelayCnt) 
-** ¹¦ÄÜÃèÊö: ¶ÁXÖá
-** ²ÎÊıÃèÊö£ºÎŞ
-** ×÷  ¡¡Õß: ±´Ò»ÌØ¿Æ¼¼  
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/ 
+** å‡½æ•°åç§°: SpiDelay(unsigned int DelayCnt)
+** åŠŸèƒ½æè¿°: è¯»Xè½´
+** å‚æ•°æè¿°ï¼šæ— 
+** ä½œ  ã€€è€…: è´ä¸€ç‰¹ç§‘æŠ€
+** æ—¥ã€€  æœŸ: 2015å¹´3æœˆ20æ—¥
+** æ·˜å®åº—é“ºï¼šhttp://shop58856066.taobao.com/
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 u16 TPReadX(void)
-{ 
+{
 	   u16 x=0;
 	   TP_CS();
 	   SpiDelay(10);
@@ -119,18 +119,18 @@ u16 TPReadX(void)
 	   x<<=8;
 	   x+=SPI_WriteByte(0x00);
 	   SpiDelay(10);
-	   TP_DCS(); 
+	   TP_DCS();
 	   x = x>>3;
 	   return (x);
 }
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-** º¯ÊıÃû³Æ: SpiDelay(unsigned int DelayCnt) 
-** ¹¦ÄÜÃèÊö: ¶ÁYÖá
-** ²ÎÊıÃèÊö£ºÎŞ
-** ×÷  ¡¡Õß: ±´Ò»ÌØ¿Æ¼¼  
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/ 
+** å‡½æ•°åç§°: SpiDelay(unsigned int DelayCnt)
+** åŠŸèƒ½æè¿°: è¯»Yè½´
+** å‚æ•°æè¿°ï¼šæ— 
+** ä½œ  ã€€è€…: è´ä¸€ç‰¹ç§‘æŠ€
+** æ—¥ã€€  æœŸ: 2015å¹´3æœˆ20æ—¥
+** æ·˜å®åº—é“ºï¼šhttp://shop58856066.taobao.com/
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 u16 TPReadY(void)
 {
 	  u16 y=0;
@@ -143,6 +143,6 @@ u16 TPReadY(void)
 	  y+=SPI_WriteByte(0x00);
 	  SpiDelay(10);
 	  TP_DCS();
-	  y = y>>3; 
+	  y = y>>3;
 	  return (y);
 }
