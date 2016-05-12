@@ -31,12 +31,12 @@ typedef struct
 #define  SSD2119    13 /* 3.5 LCD 0x9919 */
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-** º¯ÊýÃû³Æ: LCD_CtrlLinesConfig(void) FSMC
-** ¹¦ÄÜÃèÊö: Òº¾§½Ó¿ÚÅäÖÃ
-** ²ÎÊýÃèÊö£ºÎÞ
-** ×÷  ¡¡Õß: ±´Ò»ÌØ¿Æ¼¼
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: LCD_CtrlLinesConfig(void) FSMC
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: Òºï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+** ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ò»ï¿½Ø¿Æ¼ï¿½
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 void LCD_CtrlLinesConfig(void)
 {
@@ -76,12 +76,12 @@ void LCD_CtrlLinesConfig(void)
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-** º¯ÊýÃû³Æ: LCD_LightPin(void)
-** ¹¦ÄÜÃèÊö: ±³¹â¿ØÖÆ½ÅA1
-** ²ÎÊýÃèÊö£ºÎÞ
-** ×÷  ¡¡Õß: ±´Ò»ÌØ¿Æ¼¼
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: LCD_LightPin(void)
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ½ï¿½A1
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+** ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ò»ï¿½Ø¿Æ¼ï¿½
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 void LCD_LightPin(void)
 {
@@ -96,12 +96,12 @@ void LCD_LightPin(void)
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-** º¯ÊýÃû³Æ: LCD_FSMCConfig
-** ¹¦ÄÜÃèÊö: FSMCÅäÖÃ
-** ²ÎÊýÃèÊö£ºÎÞ
-** ×÷  ¡¡Õß: ±´Ò»ÌØ¿Æ¼¼
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: LCD_FSMCConfig
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: FSMCï¿½ï¿½ï¿½ï¿½
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+** ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ò»ï¿½Ø¿Æ¼ï¿½
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 void LCD_FSMCConfig(void)
 {
@@ -109,57 +109,57 @@ void LCD_FSMCConfig(void)
   	FSMC_NORSRAMTimingInitTypeDef  readWriteTiming;
 	FSMC_NORSRAMTimingInitTypeDef  writeTiming;
 
-  	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_FSMC,ENABLE);	//Ê¹ÄÜFSMCÊ±ÖÓ
-	readWriteTiming.FSMC_AddressSetupTime = 0x01;	 //µØÖ·½¨Á¢Ê±¼ä£¨ADDSET£©Îª2¸öHCLK 1/36M=27ns
-    readWriteTiming.FSMC_AddressHoldTime = 0x00;	 //µØÖ·±£³ÖÊ±¼ä£¨ADDHLD£©Ä£Ê½AÎ´ÓÃµ½
-    readWriteTiming.FSMC_DataSetupTime = 0x0f;		 // Êý¾Ý½¨Á¢Ê±¼äÎª16¸öHCLK,ÒòÎªÒº¾§Çý¶¯ICµÄ¶ÁÊý¾ÝµÄÊ±ºò£¬ËÙ¶È²»ÄÜÌ«¿ì£¬ÓÈÆä¶Ô1289Õâ¸öIC¡£
+  	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_FSMC,ENABLE);	//Ê¹ï¿½ï¿½FSMCÊ±ï¿½ï¿½
+	readWriteTiming.FSMC_AddressSetupTime = 0x01;	 //ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£¨ADDSETï¿½ï¿½Îª2ï¿½ï¿½HCLK 1/36M=27ns
+    readWriteTiming.FSMC_AddressHoldTime = 0x00;	 //ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£¨ADDHLDï¿½ï¿½Ä£Ê½AÎ´ï¿½Ãµï¿½
+    readWriteTiming.FSMC_DataSetupTime = 0x0f;		 // ï¿½ï¿½ï¿½Ý½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Îª16ï¿½ï¿½HCLK,ï¿½ï¿½ÎªÒºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ICï¿½Ä¶ï¿½ï¿½ï¿½ï¿½Ýµï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶È²ï¿½ï¿½ï¿½Ì«ï¿½ì£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1289ï¿½ï¿½ï¿½ï¿½ICï¿½ï¿½
     readWriteTiming.FSMC_BusTurnAroundDuration = 0x00;
     readWriteTiming.FSMC_CLKDivision = 0x00;
     readWriteTiming.FSMC_DataLatency = 0x00;
     readWriteTiming.FSMC_AccessMode = FSMC_AccessMode_A;	 //Ä£Ê½A
 
 
-	writeTiming.FSMC_AddressSetupTime = 0x02;	 //0x01 µØÖ·½¨Á¢Ê±¼ä£¨ADDSET£©Îª1¸öHCLK
-    writeTiming.FSMC_AddressHoldTime = 0x00;	 //µØÖ·±£³ÖÊ±¼ä£¨A
-    writeTiming.FSMC_DataSetupTime = 0x05;		 ////0x03 Êý¾Ý½¨Á¢Ê±¼äÎª4¸öHCLK
+	writeTiming.FSMC_AddressSetupTime = 0x02;	 //0x01 ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£¨ADDSETï¿½ï¿½Îª1ï¿½ï¿½HCLK
+    writeTiming.FSMC_AddressHoldTime = 0x00;	 //ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£¨A
+    writeTiming.FSMC_DataSetupTime = 0x05;		 ////0x03 ï¿½ï¿½ï¿½Ý½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Îª4ï¿½ï¿½HCLK
     writeTiming.FSMC_BusTurnAroundDuration = 0x00;
     writeTiming.FSMC_CLKDivision = 0x00;
     writeTiming.FSMC_DataLatency = 0x00;
     writeTiming.FSMC_AccessMode = FSMC_AccessMode_A;	 //Ä£Ê½A
 
 
-    FSMC_NORSRAMInitStructure.FSMC_Bank = FSMC_Bank1_NORSRAM4;//  ÕâÀïÎÒÃÇÊ¹ÓÃNE4 £¬Ò²¾Í¶ÔÓ¦BTCR[6],[7]¡£
-    FSMC_NORSRAMInitStructure.FSMC_DataAddressMux = FSMC_DataAddressMux_Disable; // ²»¸´ÓÃÊý¾ÝµØÖ·
+    FSMC_NORSRAMInitStructure.FSMC_Bank = FSMC_Bank1_NORSRAM4;//  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½NE4 ï¿½ï¿½Ò²ï¿½Í¶ï¿½Ó¦BTCR[6],[7]ï¿½ï¿½
+    FSMC_NORSRAMInitStructure.FSMC_DataAddressMux = FSMC_DataAddressMux_Disable; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½Ö·
     FSMC_NORSRAMInitStructure.FSMC_MemoryType =FSMC_MemoryType_SRAM;// FSMC_MemoryType_SRAM;  //SRAM
-    FSMC_NORSRAMInitStructure.FSMC_MemoryDataWidth = FSMC_MemoryDataWidth_16b;//´æ´¢Æ÷Êý¾Ý¿í¶ÈÎª16bit
+    FSMC_NORSRAMInitStructure.FSMC_MemoryDataWidth = FSMC_MemoryDataWidth_16b;//ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½Îª16bit
     FSMC_NORSRAMInitStructure.FSMC_BurstAccessMode =FSMC_BurstAccessMode_Disable;// FSMC_BurstAccessMode_Disable;
     FSMC_NORSRAMInitStructure.FSMC_WaitSignalPolarity = FSMC_WaitSignalPolarity_Low;
 	  FSMC_NORSRAMInitStructure.FSMC_AsynchronousWait=FSMC_AsynchronousWait_Disable;
     FSMC_NORSRAMInitStructure.FSMC_WrapMode = FSMC_WrapMode_Disable;
     FSMC_NORSRAMInitStructure.FSMC_WaitSignalActive = FSMC_WaitSignalActive_BeforeWaitState;
-    FSMC_NORSRAMInitStructure.FSMC_WriteOperation = FSMC_WriteOperation_Enable;	//  ´æ´¢Æ÷Ð´Ê¹ÄÜ
+    FSMC_NORSRAMInitStructure.FSMC_WriteOperation = FSMC_WriteOperation_Enable;	//  ï¿½æ´¢ï¿½ï¿½Ð´Ê¹ï¿½ï¿½
     FSMC_NORSRAMInitStructure.FSMC_WaitSignal = FSMC_WaitSignal_Disable;
-    FSMC_NORSRAMInitStructure.FSMC_ExtendedMode = FSMC_ExtendedMode_Enable; // ¶ÁÐ´Ê¹ÓÃ²»Í¬µÄÊ±Ðò
+    FSMC_NORSRAMInitStructure.FSMC_ExtendedMode = FSMC_ExtendedMode_Enable; // ï¿½ï¿½Ð´Ê¹ï¿½Ã²ï¿½Í¬ï¿½ï¿½Ê±ï¿½ï¿½
     FSMC_NORSRAMInitStructure.FSMC_WriteBurst = FSMC_WriteBurst_Disable;
-    FSMC_NORSRAMInitStructure.FSMC_ReadWriteTimingStruct = &readWriteTiming; //¶ÁÐ´Ê±Ðò
-    FSMC_NORSRAMInitStructure.FSMC_WriteTimingStruct = &writeTiming;  //Ð´Ê±Ðò
+    FSMC_NORSRAMInitStructure.FSMC_ReadWriteTimingStruct = &readWriteTiming; //ï¿½ï¿½Ð´Ê±ï¿½ï¿½
+    FSMC_NORSRAMInitStructure.FSMC_WriteTimingStruct = &writeTiming;  //Ð´Ê±ï¿½ï¿½
 
-    FSMC_NORSRAMInit(&FSMC_NORSRAMInitStructure);  //³õÊ¼»¯FSMCÅäÖÃ
+    FSMC_NORSRAMInit(&FSMC_NORSRAMInitStructure);  //ï¿½ï¿½Ê¼ï¿½ï¿½FSMCï¿½ï¿½ï¿½ï¿½
 
-   	FSMC_NORSRAMCmd(FSMC_Bank1_NORSRAM4, ENABLE);  // Ê¹ÄÜBANK1
+   	FSMC_NORSRAMCmd(FSMC_Bank1_NORSRAM4, ENABLE);  // Ê¹ï¿½ï¿½BANK1
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-** º¯ÊýÃû³Æ: LCD_X_Init(void)
-** ¹¦ÄÜÃèÊö: ¼¯Ìå³õÊ¼»¯
-** ²ÎÊýÃèÊö£ºÎÞ
-** ×÷  ¡¡Õß: ±´Ò»ÌØ¿Æ¼¼
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: LCD_X_Init(void)
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+** ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ò»ï¿½Ø¿Æ¼ï¿½
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 void LCD_X_Init(void)
 {
-  /*±³¹âÒý½Å³õÊ¼»¯*/
+  /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½Ê¼ï¿½ï¿½*/
   LCD_LightPin();
  /* Configure the LCD Control pins --------------------------------------------*/
   LCD_CtrlLinesConfig();
@@ -173,8 +173,8 @@ void LCD_X_Init(void)
 * Description    : Writes to the selected LCD register.
 * Input          : - LCD_Reg: address of the selected register.
 *                  - LCD_RegValue: value to write to the selected register.
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 *******************************************************************************/
 void LCD_WriteReg(u8 LCD_Reg,u16 LCD_RegValue)
 {
@@ -187,8 +187,8 @@ void LCD_WriteReg(u8 LCD_Reg,u16 LCD_RegValue)
 /*******************************************************************************
 * Function Name  : LCD_ReadReg
 * Description    : Reads the selected LCD Register.
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 *******************************************************************************/
 u16 LCD_ReadReg(u8 LCD_Reg)
 {
@@ -201,8 +201,8 @@ u16 LCD_ReadReg(u8 LCD_Reg)
 /*******************************************************************************
 * Function Name  : LCD_WriteRAM_Prepare
 * Description    : Prepare to write to the LCD RAM.
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 *******************************************************************************/
 void LCD_WriteRAM_Prepare(void)
 {
@@ -213,8 +213,8 @@ void LCD_WriteRAM_Prepare(void)
 * Function Name  : LCD_WriteRAM
 * Description    : Writes to the LCD RAM.
 * Input          : - RGB_Code: the pixel color in RGB mode (5-6-5).
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 *******************************************************************************/
 void LCD_WriteRAM(u16 RGB_Code)
 {
@@ -225,8 +225,8 @@ void LCD_WriteRAM(u16 RGB_Code)
 /*******************************************************************************
 * Function Name  : LCD_ReadRAM
 * Description    : Reads the LCD RAM.
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 *******************************************************************************/
 u16 dummy;
 u16 LCD_ReadRAM(void)
@@ -289,12 +289,12 @@ void Delay(u32 nCount)
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-** º¯ÊýÃû³Æ: void ili9320_Initializtion()
-** ¹¦ÄÜÃèÊö: ³õÊ¼»¯LCD¿ØÖÆÆ÷
-** ²ÎÊýÃèÊö£ºÎÞ
-** ×÷  ¡¡Õß: ±´Ò»ÌØ¿Æ¼¼
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: void ili9320_Initializtion()
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ê¼ï¿½ï¿½LCDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+** ï¿½ï¿½  ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½Ò»ï¿½Ø¿Æ¼ï¿½
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 void ili9320_Initializtion()
 {
@@ -304,7 +304,7 @@ void ili9320_Initializtion()
     Delay(5); /* delay 50 ms */
     Delay(5); /* delay 50 ms */
 
-	DeviceCode = LCD_ReadReg(0x0000);                //¶ÁLCDÇý¶¯ÐÍºÅ£º9325¡¢9328¡¢9320¡¢9300¡¢9331¡¢9919¡¢RU1505¡¢8989¡¢SSD1289
+	DeviceCode = LCD_ReadReg(0x0000);                //ï¿½ï¿½LCDï¿½ï¿½ï¿½ï¿½ï¿½ÍºÅ£ï¿½9325ï¿½ï¿½9328ï¿½ï¿½9320ï¿½ï¿½9300ï¿½ï¿½9331ï¿½ï¿½9919ï¿½ï¿½RU1505ï¿½ï¿½8989ï¿½ï¿½SSD1289
 	if(DeviceCode==0x1505)	      //RU61505
 	{
  		//*********************************************Start intial Sequence
@@ -375,23 +375,23 @@ void ili9320_Initializtion()
 	else if(DeviceCode==0x8989)	    //SSD1289
 	{
 
-		LCD_WriteReg(0x0000,0x0001);    ili9320_Delay(50000);   //´ò¿ª¾§Õñ
+		LCD_WriteReg(0x0000,0x0001);    ili9320_Delay(50000);   //ï¿½ò¿ª¾ï¿½ï¿½ï¿½
     	LCD_WriteReg(0x0003,0xA8A4);    ili9320_Delay(50000);   //0xA8A4
     	LCD_WriteReg(0x000C,0x0000);    ili9320_Delay(50000);
     	LCD_WriteReg(0x000D,0x080C);    ili9320_Delay(50000);
     	LCD_WriteReg(0x000E,0x2B00);    ili9320_Delay(50000);
     	LCD_WriteReg(0x001E,0x00B0);    ili9320_Delay(50000);
-    	LCD_WriteReg(0x0001,0x2B3F);    ili9320_Delay(50000);   //Çý¶¯Êä³ö¿ØÖÆ320*240  0x6B3F
+    	LCD_WriteReg(0x0001,0x2B3F);    ili9320_Delay(50000);   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½320*240  0x6B3F
     	LCD_WriteReg(0x0002,0x0600);    ili9320_Delay(50000);
     	LCD_WriteReg(0x0010,0x0000);    ili9320_Delay(50000);
-    	LCD_WriteReg(0x0011,0x6070);    ili9320_Delay(50000);   //0x4030  //¶¨ÒåÊý¾Ý¸ñÊ½  16Î»É« ºáÆÁ 0x6058
+    	LCD_WriteReg(0x0011,0x6070);    ili9320_Delay(50000);   //0x4030  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¸ï¿½Ê½  16Î»É« ï¿½ï¿½ï¿½ï¿½ 0x6058
     	LCD_WriteReg(0x0005,0x0000);    ili9320_Delay(50000);
     	LCD_WriteReg(0x0006,0x0000);    ili9320_Delay(50000);
     	LCD_WriteReg(0x0016,0xEF1C);    ili9320_Delay(50000);
     	LCD_WriteReg(0x0017,0x0003);    ili9320_Delay(50000);
     	LCD_WriteReg(0x0007,0x0233);    ili9320_Delay(50000);   //0x0233
     	LCD_WriteReg(0x000B,0x0000);    ili9320_Delay(50000);
-    	LCD_WriteReg(0x000F,0x0000);    ili9320_Delay(50000);   //É¨Ãè¿ªÊ¼µØÖ·
+    	LCD_WriteReg(0x000F,0x0000);    ili9320_Delay(50000);   //É¨ï¿½è¿ªÊ¼ï¿½ï¿½Ö·
     	LCD_WriteReg(0x0041,0x0000);    ili9320_Delay(50000);
     	LCD_WriteReg(0x0042,0x0000);    ili9320_Delay(50000);
     	LCD_WriteReg(0x0048,0x0000);    ili9320_Delay(50000);
@@ -414,8 +414,8 @@ void ili9320_Initializtion()
     	LCD_WriteReg(0x0023,0x0000);    ili9320_Delay(50000);
     	LCD_WriteReg(0x0024,0x0000);    ili9320_Delay(50000);
     	LCD_WriteReg(0x0025,0x8000);    ili9320_Delay(50000);
-    	LCD_WriteReg(0x004f,0);        //ÐÐÊ×Ö·0
-    	LCD_WriteReg(0x004e,0);        //ÁÐÊ×Ö·0
+    	LCD_WriteReg(0x004f,0);        //ï¿½ï¿½ï¿½ï¿½Ö·0
+    	LCD_WriteReg(0x004e,0);        //ï¿½ï¿½ï¿½ï¿½Ö·0
 	}
 	else if(DeviceCode==0x9325||DeviceCode==0x9328)
 	{
@@ -647,45 +647,45 @@ void ili9320_Initializtion()
 }
 
 /****************************************************************************
-* Ãû    ³Æ£ºvoid ili9320_SetCursor(u16 x,u16 y)
-* ¹¦    ÄÜ£ºÉèÖÃÆÁÄ»×ù±ê
-* Èë¿Ú²ÎÊý£ºx      ÐÐ×ù±ê
-*           y      ÁÐ×ù±ê
-* ³ö¿Ú²ÎÊý£ºÎÞ
-* Ëµ    Ã÷£º
-* µ÷ÓÃ·½·¨£ºili9320_SetCursor(10,10);
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+* ï¿½ï¿½    ï¿½Æ£ï¿½void ili9320_SetCursor(u16 x,u16 y)
+* ï¿½ï¿½    ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½x      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+*           y      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* Ëµ    ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ili9320_SetCursor(10,10);
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 ****************************************************************************/
 __inline void ili9320_SetCursor(u16 x,u16 y)
 {
 	if(DeviceCode==0x8989)
 	{
-	 	LCD_WriteReg(0x004e,y);        //ÐÐ
-    	LCD_WriteReg(0x004f,0x13f-x);  //ÁÐ
+	 	LCD_WriteReg(0x004e,y);        //ï¿½ï¿½
+    	LCD_WriteReg(0x004f,0x13f-x);  //ï¿½ï¿½
 	}
 	else if(DeviceCode==0x9919)
 	{
-		LCD_WriteReg(0x004e,x);        //ÐÐ
-  		LCD_WriteReg(0x004f,y);        //ÁÐ
+		LCD_WriteReg(0x004e,x);        //ï¿½ï¿½
+  		LCD_WriteReg(0x004f,y);        //ï¿½ï¿½
 	}
 	else
 	{
-  		LCD_WriteReg(0x0020,y);        //ÐÐ
-  		LCD_WriteReg(0x0021,0x13f-x);  //ÁÐ
+  		LCD_WriteReg(0x0020,y);        //ï¿½ï¿½
+  		LCD_WriteReg(0x0021,0x13f-x);  //ï¿½ï¿½
 	}
 }
 
 /****************************************************************************
-* Ãû    ³Æ£ºvoid ili9320_SetWindows(u16 StartX,u16 StartY,u16 EndX,u16 EndY)
-* ¹¦    ÄÜ£ºÉèÖÃ´°¿ÚÇøÓò
-* Èë¿Ú²ÎÊý£ºStartX     ÐÐÆðÊ¼×ù±ê
-*           StartY     ÁÐÆðÊ¼×ù±ê
-*           EndX       ÐÐ½áÊø×ù±ê
-*           EndY       ÁÐ½áÊø×ù±ê
-* ³ö¿Ú²ÎÊý£ºÎÞ
-* Ëµ    Ã÷£º
-* µ÷ÓÃ·½·¨£ºili9320_SetWindows(0,0,100,100)£»
+* ï¿½ï¿½    ï¿½Æ£ï¿½void ili9320_SetWindows(u16 StartX,u16 StartY,u16 EndX,u16 EndY)
+* ï¿½ï¿½    ï¿½Ü£ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½StartX     ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+*           StartY     ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+*           EndX       ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+*           EndY       ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* Ëµ    ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ili9320_SetWindows(0,0,100,100)ï¿½ï¿½
 ****************************************************************************/
 __inline void ili9320_SetWindows(u16 StartX,u16 StartY,u16 EndX,u16 EndY)
 {
@@ -697,12 +697,12 @@ __inline void ili9320_SetWindows(u16 StartX,u16 StartY,u16 EndX,u16 EndY)
 }
 
 /****************************************************************************
-* Ãû    ³Æ£ºvoid ili9320_Clear(u16 dat)
-* ¹¦    ÄÜ£º½«ÆÁÄ»Ìî³ä³ÉÖ¸¶¨µÄÑÕÉ«£¬ÈçÇåÆÁ£¬ÔòÌî³ä 0xffff
-* Èë¿Ú²ÎÊý£ºdat      Ìî³äÖµ
-* ³ö¿Ú²ÎÊý£ºÎÞ
-* Ëµ    Ã÷£º
-* µ÷ÓÃ·½·¨£ºili9320_Clear(0xffff);
+* ï¿½ï¿½    ï¿½Æ£ï¿½void ili9320_Clear(u16 dat)
+* ï¿½ï¿½    ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0xffff
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½dat      ï¿½ï¿½ï¿½ï¿½Öµ
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* Ëµ    ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ili9320_Clear(0xffff);
 ****************************************************************************/
 void ili9320_Clear(u16 Color)
 {
@@ -716,13 +716,13 @@ void ili9320_Clear(u16 Color)
 }
 
 /****************************************************************************
-* Ãû    ³Æ£ºu16 ili9320_GetPoint(u16 x,u16 y)
-* ¹¦    ÄÜ£º»ñÈ¡Ö¸¶¨×ù±êµÄÑÕÉ«Öµ
-* Èë¿Ú²ÎÊý£ºx      ÐÐ×ù±ê
-*           y      ÁÐ×ù±ê
-* ³ö¿Ú²ÎÊý£ºµ±Ç°×ù±êÑÕÉ«Öµ
-* Ëµ    Ã÷£º
-* µ÷ÓÃ·½·¨£ºi=ili9320_GetPoint(10,10);
+* ï¿½ï¿½    ï¿½Æ£ï¿½u16 ili9320_GetPoint(u16 x,u16 y)
+* ï¿½ï¿½    ï¿½Ü£ï¿½ï¿½ï¿½È¡Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«Öµ
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½x      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+*           y      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«Öµ
+* Ëµ    ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½i=ili9320_GetPoint(10,10);
 ****************************************************************************/
 u16 ili9320_GetPoint(u16 x,u16 y)
 {
@@ -730,14 +730,14 @@ u16 ili9320_GetPoint(u16 x,u16 y)
   return (ili9320_BGR2RGB(LCD_ReadRAM()));
 }
 /****************************************************************************
-* Ãû    ³Æ£ºvoid ili9320_SetPoint(u16 x,u16 y,u16 point)
-* ¹¦    ÄÜ£ºÔÚÖ¸¶¨×ù±ê»­µã
-* Èë¿Ú²ÎÊý£ºx      ÐÐ×ù±ê
-*           y      ÁÐ×ù±ê
-*           point  µãµÄÑÕÉ«
-* ³ö¿Ú²ÎÊý£ºÎÞ
-* Ëµ    Ã÷£º
-* µ÷ÓÃ·½·¨£ºili9320_SetPoint(10,10,0x0fe0);
+* ï¿½ï¿½    ï¿½Æ£ï¿½void ili9320_SetPoint(u16 x,u16 y,u16 point)
+* ï¿½ï¿½    ï¿½Ü£ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ê»­ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½x      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+*           y      ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+*           point  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* Ëµ    ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ili9320_SetPoint(10,10,0x0fe0);
 ****************************************************************************/
 void ili9320_SetPoint(u16 x,u16 y,u16 point)
 {
@@ -749,15 +749,15 @@ void ili9320_SetPoint(u16 x,u16 y,u16 point)
 }
 
 /****************************************************************************
-* Ãû    ³Æ£ºvoid ili9320_PutChar(u16 x,u16 y,u8 c,u16 charColor,u16 bkColor)
-* ¹¦    ÄÜ£ºÔÚÖ¸¶¨×ù±êÏÔÊ¾Ò»¸ö8x16µãÕóµÄascii×Ö·û
-* Èë¿Ú²ÎÊý£ºx          ÐÐ×ù±ê
-*           y          ÁÐ×ù±ê
-*           charColor  ×Ö·ûµÄÑÕÉ«
-*           bkColor    ×Ö·û±³¾°ÑÕÉ«
-* ³ö¿Ú²ÎÊý£ºÎÞ
-* Ëµ    Ã÷£ºÏÔÊ¾·¶Î§ÏÞ¶¨Îª¿ÉÏÔÊ¾µÄasciiÂë
-* µ÷ÓÃ·½·¨£ºili9320_PutChar(10,10,'a',0x0000,0xffff);
+* ï¿½ï¿½    ï¿½Æ£ï¿½void ili9320_PutChar(u16 x,u16 y,u8 c,u16 charColor,u16 bkColor)
+* ï¿½ï¿½    ï¿½Ü£ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Ò»ï¿½ï¿½8x16ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½asciiï¿½Ö·ï¿½
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½x          ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+*           y          ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+*           charColor  ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½É«
+*           bkColor    ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* Ëµ    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Î§ï¿½Þ¶ï¿½Îªï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½asciiï¿½ï¿½
+* ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ili9320_PutChar(10,10,'a',0x0000,0xffff);
 ****************************************************************************/
 void ili9320_PutChar(u16 x,u16 y,u8 c,u16 charColor,u16 bkColor)
 {
@@ -771,26 +771,26 @@ void ili9320_PutChar(u16 x,u16 y,u8 c,u16 charColor,u16 bkColor)
     tmp_char=ascii_8x16[((c-0x20)*16)+i];
     for (j=0;j<8;j++)
     {
-      if ( (tmp_char >> 7-j) & 0x01 == 0x01)
+      if (((tmp_char >> (7-j)) & 0x01) == 0x01)
         {
-          ili9320_SetPoint(x+j,y+i,charColor); // ×Ö·ûÑÕÉ«
+          ili9320_SetPoint(x+j,y+i,charColor); // ï¿½Ö·ï¿½ï¿½ï¿½É«
         }
         else
         {
-          ili9320_SetPoint(x+j,y+i,bkColor); // ±³¾°ÑÕÉ«
+          ili9320_SetPoint(x+j,y+i,bkColor); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«
         }
     }
   }
 }
 
 /****************************************************************************
-* Ãû    ³Æ£ºu16 ili9320_BGR2RGB(u16 c)
-* ¹¦    ÄÜ£ºRRRRRGGGGGGBBBBB ¸ÄÎª BBBBBGGGGGGRRRRR ¸ñÊ½
-* Èë¿Ú²ÎÊý£ºc      BRG ÑÕÉ«Öµ
-* ³ö¿Ú²ÎÊý£ºRGB ÑÕÉ«Öµ
-* Ëµ    Ã÷£ºÄÚ²¿º¯Êýµ÷ÓÃ
-** ÈÕ¡¡  ÆÚ: 2015Äê3ÔÂ20ÈÕ
-** ÌÔ±¦µêÆÌ£ºhttp://shop58856066.taobao.com/
+* ï¿½ï¿½    ï¿½Æ£ï¿½u16 ili9320_BGR2RGB(u16 c)
+* ï¿½ï¿½    ï¿½Ü£ï¿½RRRRRGGGGGGBBBBB ï¿½ï¿½Îª BBBBBGGGGGGRRRRR ï¿½ï¿½Ê½
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½c      BRG ï¿½ï¿½É«Öµ
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½RGB ï¿½ï¿½É«Öµ
+* Ëµ    ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+** ï¿½Õ¡ï¿½  ï¿½ï¿½: 2015ï¿½ï¿½3ï¿½ï¿½20ï¿½ï¿½
+** ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½http://shop58856066.taobao.com/
 ****************************************************************************/
 u16 ili9320_BGR2RGB(u16 c)
 {
@@ -806,12 +806,12 @@ u16 ili9320_BGR2RGB(u16 c)
 }
 
 /****************************************************************************
-* Ãû    ³Æ£ºvoid ili9320_BackLight(u8 status)
-* ¹¦    ÄÜ£º¿ª¡¢¹ØÒº¾§±³¹â
-* Èë¿Ú²ÎÊý£ºstatus     1:±³¹â¿ª  0:±³¹â¹Ø
-* ³ö¿Ú²ÎÊý£ºÎÞ
-* Ëµ    Ã÷£º
-* µ÷ÓÃ·½·¨£ºili9320_BackLight(1);
+* ï¿½ï¿½    ï¿½Æ£ï¿½void ili9320_BackLight(u8 status)
+* ï¿½ï¿½    ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½status     1:ï¿½ï¿½ï¿½â¿ª  0:ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* Ëµ    ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ili9320_BackLight(1);
 ****************************************************************************/
 void ili9320_BackLight(u8 status)
 {
@@ -826,12 +826,12 @@ void ili9320_BackLight(u8 status)
 }
 
 /****************************************************************************
-* Ãû    ³Æ£ºvoid ili9320_Delay(vu32 nCount)
-* ¹¦    ÄÜ£ºÑÓÊ±
-* Èë¿Ú²ÎÊý£ºnCount   ÑÓÊ±Öµ
-* ³ö¿Ú²ÎÊý£ºÎÞ
-* Ëµ    Ã÷£º
-* µ÷ÓÃ·½·¨£ºili9320_Delay(10000);
+* ï¿½ï¿½    ï¿½Æ£ï¿½void ili9320_Delay(vu32 nCount)
+* ï¿½ï¿½    ï¿½Ü£ï¿½ï¿½ï¿½Ê±
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½nCount   ï¿½ï¿½Ê±Öµ
+* ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* Ëµ    ï¿½ï¿½ï¿½ï¿½
+* ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ili9320_Delay(10000);
 ****************************************************************************/
 void ili9320_Delay(vu32 nCount)
 {
