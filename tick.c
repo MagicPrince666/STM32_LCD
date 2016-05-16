@@ -2,21 +2,19 @@
 
 __IO u32 TimingDelay=0;
 
-void init_tick()
-{		
-	  //* SystemCoreClock / 100000    10usÖÐ¶ÏÒ»´Î
-	  //* SystemCoreClock / 10000		  100usÖÐ¶ÏÒ»´Î
-		//* SystemCoreClock / 1000      1msÖÐ¶ÏÒ»´Î
+void init_tick() {
+	  //* SystemCoreClock / 100000    10usï¿½Ð¶ï¿½Ò»ï¿½ï¿½
+	  //* SystemCoreClock / 10000		  100usï¿½Ð¶ï¿½Ò»ï¿½ï¿½
+		//* SystemCoreClock / 1000      1msï¿½Ð¶ï¿½Ò»ï¿½ï¿½
     if (SysTick_Config(SystemCoreClock / 100000))
     {
         while (1);
     }
-		//¹Ø±ÕµÎ´ð¶¨Ê±Æ÷
+		//ï¿½Ø±ÕµÎ´ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
     SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
 }
 
-void d(__IO u32 x)
-{
+void d(__IO u32 x) {
     TimingDelay = x;
     SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
     while (TimingDelay != 0);
@@ -24,13 +22,12 @@ void d(__IO u32 x)
 
 void TimingDelayDecrement(void)
 {
-    if (TimingDelay)
+    if (TimingDelay) {
         --TimingDelay;
+    }
 }
 
-void delay(__IO u32 x)
-{
-    
+void delay(__IO u32 x) {
     SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
     while (x-- != 0);
 }

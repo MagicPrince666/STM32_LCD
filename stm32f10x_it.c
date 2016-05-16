@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    Project/STM32F10x_StdPeriph_Template/stm32f10x_it.c 
+  * @file    Project/STM32F10x_StdPeriph_Template/stm32f10x_it.c
   * @author  MCD Application Team
   * @version V3.5.0
   * @date    08-April-2011
   * @brief   Main Interrupt Service Routines.
-  *          This file provides template for all exceptions handler and 
+  *          This file provides template for all exceptions handler and
   *          peripherals interrupt service routine.
   ******************************************************************************
   * @attention
@@ -150,16 +150,16 @@ void SysTick_Handler(void)
 unsigned short int status = 0x00;
 int delayflag = 0;
 //int count0 = 0;
-void EXTI0_IRQHandler(void)  
-{  
-    if(EXTI_GetITStatus(EXTI_Line0) != RESET)  
-    {   
+void EXTI0_IRQHandler(void)
+{
+    if(EXTI_GetITStatus(EXTI_Line0) != RESET)
+    {
 			  //d(30000);
 				delayflag = ~delayflag;
-				EXTI_ClearITPendingBit(EXTI_Line0);  
-    }  
+				EXTI_ClearITPendingBit(EXTI_Line0);
+    }
 				//if (GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_0) == 0)
-				//{		
+				//{
 					  //d(1000);
 						//while(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_0) == 0);
 						//state0 = ~state0;
@@ -170,14 +170,14 @@ void EXTI0_IRQHandler(void)
         {
             //GPIO_ResetBits(GPIOG, GPIO_Pin_14);
             //GPIO_SetBits(GPIOD, GPIO_Pin_13);
-					  
+
             if (GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_0) == 0)
 						{
 								//while(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_0) == 0);
 								state0 = ~state0;
 								delayflag = ~delayflag;
 						}
-						
+
 						//{
 								//if(1 == state0)
 								//	state0 = 0;
@@ -185,18 +185,18 @@ void EXTI0_IRQHandler(void)
 								//	state0 = 1;
 								//state0 = ~state0;
 						//}
-							
+
         }
 				state0 = 0;
 				*/
-        /* Clear the EXTI line 9 pending bit */  
-     
+        /* Clear the EXTI line 9 pending bit */
+
 }
 
-void EXTI15_10_IRQHandler(void)  
-{  
-    if(EXTI_GetITStatus(EXTI_Line13) != RESET)  
-    {  	
+void EXTI15_10_IRQHandler(void)
+{
+    if(EXTI_GetITStatus(EXTI_Line13) != RESET)
+    {
 				  delay(100000);
 				  //if(GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13)== 0)  //#define KEY1 GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_5)   #define KEY_DOWN 0
              //   {
@@ -204,18 +204,18 @@ void EXTI15_10_IRQHandler(void)
 									case 0:status = 1;break;
 									case 1:status = 2;break;
 									case 2:status = 3;break;
-									case 3:status = 0;break;  
-			
+									case 3:status = 0;break;
+
                 }
 						//	}
 				//if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) == 0)
-				//{         
-				//	count0++;                        
-        //  if(count0>=10000)                  
-        //  {                                                                                           
-							
-					
-       //   }      			
+				//{
+				//	count0++;
+        //  if(count0>=10000)
+        //  {
+
+
+       //   }
 				//}
 				//count0 =0;
         //while (!state1)
@@ -231,10 +231,10 @@ void EXTI15_10_IRQHandler(void)
 						//}
         //}
 				//state1 = 0;
-        /* Clear the EXTI line 9 pending bit */  
-        EXTI_ClearITPendingBit(EXTI_Line13);  
+        /* Clear the EXTI line 9 pending bit */
+        EXTI_ClearITPendingBit(EXTI_Line13);
 				//d(1000);
-    }  
+    }
 }
 
 /**
@@ -248,7 +248,7 @@ void EXTI15_10_IRQHandler(void)
 
 /**
   * @}
-  */ 
+  */
 
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
