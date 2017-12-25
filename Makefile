@@ -10,45 +10,36 @@
 BUILDDIR = build
 
 CORE = stm32/core
-PERIPH = stm32/periph
 DRIVER = stm32/driver
+SYSTEM = SYSTEM
+HARDWARE = HARDWARE
 
 
 ###############################################################################
-SOURCES += $(PERIPH)/src/stm32f10x_gpio.c		\
-			$(PERIPH)/src/stm32f10x_i2c.c		\
-			$(PERIPH)/src/stm32f10x_rcc.c		\
-			$(PERIPH)/src/stm32f10x_spi.c		\
-			$(PERIPH)/src/stm32f10x_exti.c		\
-			$(PERIPH)/src/stm32f10x_flash.c		\
-			$(PERIPH)/src/stm32f10x_usart.c		\
-			$(PERIPH)/src/misc.c				\
-			$(PERIPH)/src/stm32f10x_tim.c		\
-			$(PERIPH)/src/stm32f10x_dma.c		\
-			$(PERIPH)/src/stm32f10x_adc.c		\
-			$(PERIPH)/src/stm32f10x_dac.c		\
-			$(PERIPH)/src/stm32f10x_pwr.c		\
-			$(PERIPH)/src/stm32f10x_fsmc.c		\
-			$(CORE)/src/core_cm3.c				\
-			$(DRIVER)/src/HzLib_65k.c			\
-			$(DRIVER)/src/ili9320_api.c			\
-			$(DRIVER)/src/ili9320.c				\
-			$(DRIVER)/src/TOUCH_SPI2.c
+SOURCES += 	$(CORE)/src/core_cm3.c				\
+			$(SYSTEM)/sys/sys.c					\
+			$(SYSTEM)/delay/delay.c				\
+			$(SYSTEM)/usart/usart.c				\
+			$(HARDWARE)/src/led.c				\
+			$(HARDWARE)/src/ILI93xx.c			\
+			$(HARDWARE)/src/adc.c				\
+			$(HARDWARE)/src/exti.c				\
+			$(HARDWARE)/src/key.c				\
+			$(HARDWARE)/src/spi.c				\
+			$(HARDWARE)/src/spi_tft.c
 
 SOURCES += startup_stm32f10x_xl.s
 SOURCES += stm32f10x_it.c
 SOURCES += system_stm32f10x.c
-SOURCES += led.c
-SOURCES += tick.c
-SOURCES += pwm_output.c
-# SOURCES += config.c
 SOURCES += main.c
 
 OBJECTS = $(addprefix $(BUILDDIR)/, $(addsuffix .o, $(basename $(SOURCES))))
 
 INCLUDE +=  -I$(CORE)/include	\
-			-I$(PERIPH)/include	\
-			-I$(DRIVER)/include
+			-I$(SYSTEM)/sys		\
+			-I$(SYSTEM)/delay	\
+			-I$(SYSTEM)/usart	\
+			-I$(HARDWARE)/include
 
 ELF = $(BUILDDIR)/program.elf
 HEX = $(BUILDDIR)/program.hex
@@ -56,7 +47,7 @@ BIN = $(BUILDDIR)/program.bin
 TARGETMAP = stm32f10x.map
 
 LDSCRIPT = stm32f103xe_flash.ld
-TARGET_ARCH = -mthumb -mcpu=cortex-m3
+TARGET_ARCH = -mthumb -mcpu=cortex-m3 --specs=nano.specs --specs=nosys.specs
 LDFLAGS = -nostartfiles -Wl,--gc-sections,-Map=$(TARGETMAP),-cref $(TARGET_ARCH)
 
 ###------------------------  Cross Compile Toolchain ------------------------###

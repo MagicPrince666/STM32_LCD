@@ -23,9 +23,9 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
-#include "stm32f10x_gpio.h"
-#include "stm32f10x_exti.h"
-#include "tick.h"
+//#include "stm32f10x_gpio.h"
+//#include "stm32f10x_exti.h"
+#include "delay.h"
 
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
@@ -137,105 +137,9 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
-    TimingDelayDecrement();
+    //TimingDelayDecrement();
 }
 
-/******************************************************************************/
-/*                 STM32F10x Peripherals Interrupt Handlers                   */
-/*  Add here the Interrupt Handler for the used peripheral(s) (PPP), for the  */
-/*  available peripheral interrupt handler's name please refer to the startup */
-/*  file (startup_stm32f10x_xx.s).                                            */
-/******************************************************************************/
-//static int state0 = 0, state1 = 0;
-unsigned short int status = 0x00;
-int delayflag = 0;
-//int count0 = 0;
-void EXTI0_IRQHandler(void)
-{
-    if(EXTI_GetITStatus(EXTI_Line0) != RESET)
-    {
-			  //d(30000);
-				delayflag = ~delayflag;
-				EXTI_ClearITPendingBit(EXTI_Line0);
-    }
-				//if (GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_0) == 0)
-				//{
-					  //d(1000);
-						//while(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_0) == 0);
-						//state0 = ~state0;
-						//delayflag = 1;
-				//}
-				/*
-        while (!state0)
-        {
-            //GPIO_ResetBits(GPIOG, GPIO_Pin_14);
-            //GPIO_SetBits(GPIOD, GPIO_Pin_13);
-
-            if (GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_0) == 0)
-						{
-								//while(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_0) == 0);
-								state0 = ~state0;
-								delayflag = ~delayflag;
-						}
-
-						//{
-								//if(1 == state0)
-								//	state0 = 0;
-								//else
-								//	state0 = 1;
-								//state0 = ~state0;
-						//}
-
-        }
-				state0 = 0;
-				*/
-        /* Clear the EXTI line 9 pending bit */
-
-}
-
-void EXTI15_10_IRQHandler(void)
-{
-    if(EXTI_GetITStatus(EXTI_Line13) != RESET)
-    {
-				  delay(100000);
-				  //if(GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13)== 0)  //#define KEY1 GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_5)   #define KEY_DOWN 0
-             //   {
-                      switch(status){
-									case 0:status = 1;break;
-									case 1:status = 2;break;
-									case 2:status = 3;break;
-									case 3:status = 0;break;
-
-                }
-						//	}
-				//if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) == 0)
-				//{
-				//	count0++;
-        //  if(count0>=10000)
-        //  {
-
-
-       //   }
-				//}
-				//count0 =0;
-        //while (!state1)
-        //{
-            //GPIO_SetBits(GPIOG, GPIO_Pin_14);
-           // GPIO_ResetBits(GPIOD, GPIO_Pin_13);
-            //if ((GPIO_ReadInputData(GPIOC) >> 13) & 1)
-            //   break;
-					  //if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) == 0)
-						//{
-								//while(GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) == 0);
-						//		state1 = ~state1;
-						//}
-        //}
-				//state1 = 0;
-        /* Clear the EXTI line 9 pending bit */
-        EXTI_ClearITPendingBit(EXTI_Line13);
-				//d(1000);
-    }
-}
 
 /**
   * @brief  This function handles PPP interrupt request.

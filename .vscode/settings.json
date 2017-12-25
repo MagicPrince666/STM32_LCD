@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "tick.h": "c",
+        "delay.h": "c",
+        "usart.h": "c",
+        "stdio.h": "c",
+        "led.h": "c",
+        "stm32f10x_exti.h": "c"
+    }
+}
