@@ -2,3 +2,4 @@ build
 .DS_Store
 stm32f10x.map
 tags
+.vscode/
