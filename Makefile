@@ -33,13 +33,20 @@ SOURCES += stm32f10x_it.c
 SOURCES += system_stm32f10x.c
 SOURCES += main.c
 
+CXX_SOURCES = CPP/ringbuffer.cpp
+
 OBJECTS = $(addprefix $(BUILDDIR)/, $(addsuffix .o, $(basename $(SOURCES))))
+OBJECTS += $(addprefix $(BUILDDIR)/,$(notdir $(CXX_SOURCES:.cpp=.o)))
+vpath %.cpp $(sort $(dir $(CXX_SOURCES)))
 
 INCLUDE +=  -I$(CORE)/include	\
 			-I$(SYSTEM)/sys		\
 			-I$(SYSTEM)/delay	\
 			-I$(SYSTEM)/usart	\
 			-I$(HARDWARE)/include
+
+CXX_INCLUDES =  \
+-ICPP
 
 ELF = $(BUILDDIR)/program.elf
 HEX = $(BUILDDIR)/program.hex
@@ -51,10 +58,12 @@ TARGET_ARCH = -mthumb -mcpu=cortex-m3 --specs=nano.specs --specs=nosys.specs
 LDFLAGS = -nostartfiles -Wl,--gc-sections,-Map=$(TARGETMAP),-cref $(TARGET_ARCH)
 
 ###------------------------  Cross Compile Toolchain ------------------------###
-CC      = arm-none-eabi-gcc
-LD      = arm-none-eabi-gcc
-AR      = arm-none-eabi-ar
-OBJCOPY = arm-none-eabi-objcopy
+PREFIX  = arm-none-eabi-
+CC      = $(PREFIX)gcc
+CXX     = $(PREFIX)g++
+LD      = $(PREFIX)gcc
+AR      = $(PREFIX)ar
+OBJCOPY = $(PREFIX)objcopy
 
 WARNINGS = -Wall -Wshadow -Wcast-qual -Wwrite-strings -Winline -Wno-strict-aliasing
 
@@ -67,6 +76,8 @@ CFLAGS += -fdata-sections
 CFLAGS += $(INCLUDE)
 CFLAGS += -DUSE_STDPERIPH_DRIVER
 
+CXXFLAGS = $(CFLAGS) $(CXX_INCLUDES) -lstdc++
+
 #-mfpu=fpv4-sp-d16 -mfloat-abi=hard
 
 #---------------------------------- Build ----------------------------------#
@@ -77,10 +88,6 @@ build: $(BIN) $(HEX)
 flash: build
 	st-flash write $(BIN) 0x8000000
 
-#---------------------------------- Clean ----------------------------------#
-clean:
-	rm -rf build
-	rm -f $(TARGETMAP)
 
 $(BIN): $(ELF)
 	$(OBJCOPY) -O binary $< $@
@@ -91,6 +98,10 @@ $(HEX): $(ELF)
 $(ELF): $(OBJECTS)
 	$(LD) $(LDFLAGS) -T$(LDSCRIPT) -o $@ $(OBJECTS) $(LDLIBS)
 
+$(BUILDDIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) -c $(CXXFLAGS) $< -o $@
+
 $(BUILDDIR)/%.o: %.c
 	@mkdir -p $(dir $@)
 	$(CC) -c $(CFLAGS) $< -o $@
@@ -98,3 +109,8 @@ $(BUILDDIR)/%.o: %.c
 $(BUILDDIR)/%.o: %.s
 	@mkdir -p $(dir $@)
 	$(CC) -c $(CFLAGS) $< -o $@
+
+#---------------------------------- Clean ----------------------------------#
+clean:
+	rm -rf build
+	rm -f $(TARGETMAP)
